@@ -218,3 +218,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Site backend database (contains inquiries and the admin password hash)
+data/

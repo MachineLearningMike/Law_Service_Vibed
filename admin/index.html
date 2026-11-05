@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Site Admin</title>
+  <link rel="stylesheet" href="admin.css">
+  <script src="admin.js" defer></script>
+</head>
+<body>
+  <main id="login-view" class="login" hidden>
+    <form id="login-form" class="login-card">
+      <h1>Site Admin</h1>
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" autocomplete="current-password" required autofocus>
+      <p class="error" id="login-error" role="alert"></p>
+      <button class="btn" type="submit">Log in</button>
+      <a class="muted" href="/">← Back to website</a>
+    </form>
+  </main>
+
+  <div id="app-view" class="app" hidden>
+    <aside class="sidebar">
+      <div class="brand">Site Admin</div>
+      <nav id="nav"></nav>
+      <div class="sidebar-foot">
+        <a href="/" target="_blank" rel="noopener">View website ↗</a>
+        <button id="logout" class="link">Log out</button>
+      </div>
+    </aside>
+    <section class="main">
+      <header class="main-head">
+        <h1 id="view-title"></h1>
+        <div id="view-actions"></div>
+      </header>
+      <div id="view"></div>
+    </section>
+  </div>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

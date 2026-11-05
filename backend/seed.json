@@ -1,0 +1,345 @@
+{
+  "site": {
+    "name": "Surenjav & Ulemj",
+    "suffix": "Partners · Attorneys at Law",
+    "legal": "Surenjav & Ulemj Partners",
+    "name_mn": "Сүрэнжав & Үлэмж Партнерс",
+    "tagline": "Advocacy and Legal Services",
+    "slogan": "We don't follow standards. We set them.",
+    "slogan_mn": "Бид стандартыг дагах биш, Бид стандартыг тогтоодог.",
+    "address": [
+      "Ulaanbaatar, Mongolia"
+    ],
+    "email": "info@example.mn",
+    "phone": "+976 0000 0000",
+    "hours": "Mon – Fri, 9:00 – 18:00"
+  },
+  "icons": [
+    "briefcase",
+    "shield",
+    "bank",
+    "scale",
+    "chart",
+    "coins",
+    "award",
+    "pin",
+    "tag",
+    "layers",
+    "star",
+    "thumb",
+    "globe",
+    "clock",
+    "chat",
+    "mail",
+    "phone",
+    "energy",
+    "doc",
+    "book",
+    "calc",
+    "mine"
+  ],
+  "practices": [
+    {
+      "slug": "advocacy",
+      "icon": "scale",
+      "title": "Advocacy",
+      "short": "Defending and advancing our clients' rights and interests as their advocates.",
+      "items": []
+    },
+    {
+      "slug": "legal-advice",
+      "icon": "chat",
+      "title": "Oral and Written Legal Advice",
+      "short": "Clear legal advice, in person or in writing, so you can make decisions with confidence.",
+      "items": []
+    },
+    {
+      "slug": "contracts",
+      "icon": "doc",
+      "title": "Contract Drafting",
+      "short": "Contracts drafted in line with Mongolian law and international trade law, rules and practice, and legal opinions on existing agreements.",
+      "items": []
+    },
+    {
+      "slug": "internal-rules",
+      "icon": "shield",
+      "title": "Internal Rules and Charters",
+      "short": "Drafting the internal regulations and charters that govern how your organisation operates.",
+      "items": []
+    },
+    {
+      "slug": "representation",
+      "icon": "bank",
+      "title": "Civil, Criminal and Administrative Cases",
+      "short": "Representing clients and restoring violated rights through court and administrative procedures.",
+      "items": [
+        "Civil cases",
+        "Criminal cases",
+        "Administrative cases"
+      ]
+    },
+    {
+      "slug": "tax",
+      "icon": "tag",
+      "title": "Tax Law Advice",
+      "short": "Advice on Mongolian tax legislation and how it applies to your business.",
+      "items": []
+    },
+    {
+      "slug": "financial",
+      "icon": "coins",
+      "title": "Financial Advice",
+      "short": "Financial advice that supports sound business decisions.",
+      "items": []
+    },
+    {
+      "slug": "accounting",
+      "icon": "calc",
+      "title": "Accounting Advice",
+      "short": "Advice on accounting and bookkeeping records.",
+      "items": []
+    },
+    {
+      "slug": "training",
+      "icon": "book",
+      "title": "Legal Training and Research",
+      "short": "Legal training for your team and in-depth legal research.",
+      "items": []
+    }
+  ],
+  "why": [
+    {
+      "icon": "award",
+      "title": "Since 1996",
+      "description": "One of the first legal service firms established in Mongolia."
+    },
+    {
+      "icon": "star",
+      "title": "International Standards",
+      "description": "Legal services delivered in line with international standards and practice."
+    },
+    {
+      "icon": "globe",
+      "title": "International Partners",
+      "description": "We work with law firms in China, South Korea, Russia, Australia and France."
+    },
+    {
+      "icon": "shield",
+      "title": "Lower Business Risk",
+      "description": "Ongoing legal advice and support that significantly reduces business risk."
+    },
+    {
+      "icon": "scale",
+      "title": "Rights Restored",
+      "description": "Violated rights restored through court and administrative procedures."
+    },
+    {
+      "icon": "doc",
+      "title": "Sound Contracts",
+      "description": "Contracts that comply with Mongolian law and international trade law."
+    },
+    {
+      "icon": "book",
+      "title": "Legal Report",
+      "description": "Our online journal has kept citizens and businesses informed of government decisions since 2015."
+    },
+    {
+      "icon": "tag",
+      "title": "Transparent Fees",
+      "description": "Published fees for consultations, contract drafting and advocacy."
+    },
+    {
+      "icon": "layers",
+      "title": "Full-Service Support",
+      "description": "Legal, tax, financial and accounting advice from one firm."
+    }
+  ],
+  "team": [
+    {
+      "name": "Batbayar G.",
+      "role": "Managing Partner",
+      "bio": "Leads the firm's corporate and M&A practice with 20 years of cross-border experience.",
+      "langs": [
+        "EN",
+        "MN",
+        "RU"
+      ]
+    },
+    {
+      "name": "Sarah Mitchell",
+      "role": "Partner",
+      "bio": "Advises international lenders and sponsors on banking, finance and project finance matters.",
+      "langs": [
+        "EN",
+        "FR"
+      ]
+    },
+    {
+      "name": "Oyunchimeg D.",
+      "role": "Partner",
+      "bio": "Heads the regulatory and compliance group, focusing on financial services and fintech.",
+      "langs": [
+        "EN",
+        "MN"
+      ]
+    },
+    {
+      "name": "Temuujin B.",
+      "role": "Senior Associate",
+      "bio": "Specialises in mining, energy and infrastructure transactions and licensing.",
+      "langs": [
+        "EN",
+        "MN",
+        "RU"
+      ]
+    },
+    {
+      "name": "Enkhjargal T.",
+      "role": "Senior Associate",
+      "bio": "Works on capital markets, securities regulation and private equity investments.",
+      "langs": [
+        "EN",
+        "MN"
+      ]
+    },
+    {
+      "name": "Daniel Park",
+      "role": "Of Counsel",
+      "bio": "Focuses on tax structuring and treaty planning for inbound investment.",
+      "langs": [
+        "EN",
+        "KO"
+      ]
+    },
+    {
+      "name": "Munkhzul S.",
+      "role": "Associate",
+      "bio": "Supports corporate, governance and employment matters for foreign-invested companies.",
+      "langs": [
+        "EN",
+        "MN"
+      ]
+    },
+    {
+      "name": "Ganbold E.",
+      "role": "Associate",
+      "bio": "Assists on banking and finance transactions and security enforcement.",
+      "langs": [
+        "EN",
+        "MN",
+        "RU"
+      ]
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "Getting continuous legal advice and support in business significantly reduces business risk.",
+      "author": "Jon Jin Hyeon",
+      "role": "Director, “GS Loen” NBFI"
+    },
+    {
+      "quote": "The role of legal counsel is vital when operating in the construction sector.",
+      "author": "G. Khongorzul",
+      "role": "Director, “Asian Era” LLC"
+    }
+  ],
+  "fees": [
+    {
+      "title": "All types of consultation",
+      "price": "450,000₮",
+      "unit": "per hour"
+    },
+    {
+      "title": "Contract drafting",
+      "price": "500,000₮ – 1,500,000₮",
+      "unit": ""
+    },
+    {
+      "title": "Advocacy in civil cases",
+      "price": "400,000₮ – 600,000₮",
+      "unit": "per hour"
+    },
+    {
+      "title": "Advocacy in administrative cases",
+      "price": "600,000₮",
+      "unit": "per hour"
+    },
+    {
+      "title": "Advocacy in criminal cases",
+      "price": "400,000₮ – 600,000₮",
+      "unit": "per hour"
+    }
+  ],
+  "posts": [
+    {
+      "slug": "new-incentives-for-renewable-energy-producers",
+      "date": "2026-10-12",
+      "category": "Energy",
+      "title": "New Incentives for Renewable Energy Producers",
+      "excerpt": "Recent amendments revise feed-in tariffs and grid-connection rules. We outline what developers need to know.",
+      "body": [
+        "Amendments adopted this year revise the tariff mechanism for renewable generators and clarify the process for connecting to the national grid.",
+        "Developers with projects in the pipeline should review their power purchase arrangements and permitting timelines against the new rules.",
+        "This note is a general overview and not legal advice; please contact us to discuss how the changes affect your project."
+      ]
+    },
+    {
+      "slug": "privatisation-of-state-owned-enterprises-a-practical-guide",
+      "date": "2026-08-28",
+      "category": "Corporate",
+      "title": "Privatisation of State-Owned Enterprises: A Practical Guide",
+      "excerpt": "The government has announced a new round of privatisations. Here is how the process works and where investors can participate.",
+      "body": [
+        "A new privatisation programme lists several state-owned enterprises for full or partial sale.",
+        "We summarise the tender procedure, eligibility criteria for foreign bidders and key due-diligence considerations.",
+        "Investors should engage early, as bidding windows are typically short."
+      ]
+    },
+    {
+      "slug": "draft-minerals-law-key-proposals",
+      "date": "2026-06-15",
+      "category": "Mining",
+      "title": "Draft Minerals Law: Key Proposals",
+      "excerpt": "A draft revision of the minerals law proposes changes to licensing, state participation and stability agreements.",
+      "body": [
+        "The draft would reshape the licensing regime and the framework for state equity participation in strategic deposits.",
+        "Stakeholders have been invited to comment during the consultation period.",
+        "We will continue to monitor the draft as it moves through parliament."
+      ]
+    },
+    {
+      "slug": "taxation-on-transfers-of-mineral-licences",
+      "date": "2026-04-03",
+      "category": "Tax",
+      "title": "Taxation on Transfers of Mineral Licences",
+      "excerpt": "Clarification from the tax authority on how indirect transfers of licence-holding entities are taxed.",
+      "body": [
+        "The tax authority has issued guidance on the treatment of indirect transfers of entities holding mineral licences.",
+        "The guidance affects offshore holding structures and may trigger local tax filing obligations.",
+        "Parties to pending transactions should reassess their structuring and tax indemnities."
+      ]
+    },
+    {
+      "slug": "land-use-fee-changes-for-commercial-property",
+      "date": "2026-02-20",
+      "category": "Tax",
+      "title": "Land-Use Fee Changes for Commercial Property",
+      "excerpt": "Updated land-use fee rates take effect this year. We explain the impact on commercial landholders.",
+      "body": [
+        "New rates for land-use fees apply to commercial and industrial land in major cities.",
+        "Businesses should budget for the increase and check that their land-use certificates are up to date."
+      ]
+    },
+    {
+      "slug": "firm-joins-international-legal-alliance",
+      "date": "2025-11-30",
+      "category": "Firm News",
+      "title": "Firm Joins International Legal Alliance",
+      "excerpt": "We are pleased to announce our membership of an international network of independent business law firms.",
+      "body": [
+        "Membership gives our clients access to trusted counsel in more than 40 jurisdictions.",
+        "It also strengthens our ability to support inbound investors from Europe, Asia and North America."
+      ]
+    }
+  ]
+}

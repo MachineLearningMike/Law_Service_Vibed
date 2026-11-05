@@ -2,21 +2,26 @@
    Site configuration — edit firm details here (used site-wide)
    ============================================================ */
 const SITE = {
-  name: "Meridian",
-  suffix: "Law Group",
-  legal: "Meridian Law Group LLP",
-  address: ["Suite 500, Example Business Tower", "Peace Avenue 1", "Ulaanbaatar 14200, Mongolia"],
-  email: "info@example-lawgroup.mn",
-  phone: "+976 7000 0000",
+  name: "Surenjav & Ulemj",
+  suffix: "Partners · Attorneys at Law",
+  legal: "Surenjav & Ulemj Partners",
+  name_mn: "Сүрэнжав & Үлэмж Партнерс",
+  tagline: "Advocacy and Legal Services",
+  slogan: "We don't follow standards. We set them.",
+  slogan_mn: "Бид стандартыг дагах биш, Бид стандартыг тогтоодог.",
+  // TODO: replace with the firm's real contact details (not in the brochure)
+  address: ["Ulaanbaatar, Mongolia"],
+  email: "info@example.mn",
+  phone: "+976 0000 0000",
   hours: "Mon – Fri, 9:00 – 18:00",
 };
 
 const NAV = [
   ["index.html", "Home"],
   ["about.html", "About Us"],
+  ["practices.html", "Services & Fees"],
   ["team.html", "Our Team"],
-  ["practices.html", "Practices"],
-  ["insights.html", "Insights"],
+  ["insights.html", "Legal Report"],
   ["contact.html", "Contact Us"],
 ];
 
@@ -40,53 +45,72 @@ const ICONS = {
   mail: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>',
   phone: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>',
   energy: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>',
+  doc: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>',
+  book: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg>',
+  calc: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 12h1M12 12h1M16 12h0M8 16h1M12 16h1M16 12v4"/></svg>',
   mine: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21l9-16 9 16z"/><path d="M8 21l4-7 4 7"/></svg>',
 };
 const icon = (n) => ICONS[n] || "";
 
-/* ---------- Content data ---------- */
+/* ---------- Content data (built-in copy; the backend serves the live version) ---------- */
 const PRACTICES = [
-  { id: "corporate", icon: "briefcase", title: "Corporate and M&A",
-    short: "Market entry, joint ventures, acquisitions and disposals, restructurings and day-to-day corporate support.",
-    items: ["Foreign direct investment and company formation", "Share and asset acquisitions, mergers and disposals", "Joint ventures and shareholder agreements", "Due diligence and transaction structuring", "Corporate restructurings and reorganisations"] },
-  { id: "governance", icon: "shield", title: "Corporate Governance and Compliance",
-    short: "Board practice, internal policies, anti-corruption and regulatory compliance programmes.",
-    items: ["Board and shareholder meeting procedures", "Anti-bribery and anti-money-laundering compliance", "Internal investigations", "Licensing and regulatory filings", "Related-party transaction reviews"] },
-  { id: "banking", icon: "bank", title: "Banking and Finance",
-    short: "Lender and borrower-side advice on secured lending, syndicated facilities and security packages.",
-    items: ["Bilateral and syndicated loans", "Security creation, perfection and enforcement", "Trade and commodity finance", "Debt restructuring and workouts", "Development finance institution lending"] },
-  { id: "financial-services", icon: "scale", title: "Financial Services and Regulations",
-    short: "Licensing and regulatory advice for banks, non-bank financial institutions, fintech and insurers.",
-    items: ["Banking and NBFI licensing", "Payments and fintech regulation", "Insurance regulation", "Regulatory investigations and enforcement", "Consumer finance compliance"] },
-  { id: "capital-markets", icon: "chart", title: "Capital Markets",
-    short: "Equity and debt offerings, listings, bond issuances and securities regulatory matters.",
-    items: ["IPOs and secondary offerings", "Domestic and international bond issues", "Dual listings", "Securities disclosure and continuing obligations", "Takeover regulation"] },
-  { id: "private-equity", icon: "coins", title: "Private Equity",
-    short: "Fund formation, portfolio investments and exits for sponsors and institutional investors.",
-    items: ["Portfolio company acquisitions", "Minority and growth investments", "Management incentive arrangements", "Exit strategies and secondary sales", "Fund structuring"] },
-  { id: "energy", icon: "energy", title: "Energy and Infrastructure",
-    short: "Power, renewables, PPP and concession projects from development through financing and operation.",
-    items: ["Renewable energy projects and PPAs", "Public–private partnerships and concessions", "Project finance and construction contracts", "Permitting and regulatory approvals"] },
-  { id: "mining", icon: "mine", title: "Mining and Natural Resources",
-    short: "Exploration and mining licences, investment agreements, offtake and resource-sector transactions.",
-    items: ["Licence acquisition and transfer", "Investment and stability agreements", "Offtake and supply contracts", "Environmental and community obligations"] },
-  { id: "tax", icon: "tag", title: "Tax",
-    short: "Transaction tax structuring, double-tax treaty planning and tax dispute support.",
-    items: ["Tax structuring of investments and transactions", "Double taxation treaty analysis", "Withholding and indirect tax", "Tax audits and disputes"] },
+  { id: "advocacy", icon: "scale", title: "Advocacy",
+    short: "Defending and advancing our clients' rights and interests as their advocates.",
+    items: [] },
+  { id: "legal-advice", icon: "chat", title: "Oral and Written Legal Advice",
+    short: "Clear legal advice, in person or in writing, so you can make decisions with confidence.",
+    items: [] },
+  { id: "contracts", icon: "doc", title: "Contract Drafting",
+    short: "Contracts drafted in line with Mongolian law and international trade law, rules and practice, and legal opinions on existing agreements.",
+    items: [] },
+  { id: "internal-rules", icon: "shield", title: "Internal Rules and Charters",
+    short: "Drafting the internal regulations and charters that govern how your organisation operates.",
+    items: [] },
+  { id: "representation", icon: "bank", title: "Civil, Criminal and Administrative Cases",
+    short: "Representing clients and restoring violated rights through court and administrative procedures.",
+    items: ["Civil cases", "Criminal cases", "Administrative cases"] },
+  { id: "tax", icon: "tag", title: "Tax Law Advice",
+    short: "Advice on Mongolian tax legislation and how it applies to your business.",
+    items: [] },
+  { id: "financial", icon: "coins", title: "Financial Advice",
+    short: "Financial advice that supports sound business decisions.",
+    items: [] },
+  { id: "accounting", icon: "calc", title: "Accounting Advice",
+    short: "Advice on accounting and bookkeeping records.",
+    items: [] },
+  { id: "training", icon: "book", title: "Legal Training and Research",
+    short: "Legal training for your team and in-depth legal research.",
+    items: [] },
 ];
 
 const WHY = [
-  ["award", "Proven Ability", "A track record on complex, high-value cross-border mandates."],
-  ["pin", "On-the-Ground Experience", "Deep familiarity with local regulators, courts and business practice."],
-  ["tag", "Alternative Fees", "Fixed, capped and blended fee arrangements tailored to each matter."],
-  ["layers", "Full-Service Skills", "One team covering corporate, finance, regulatory, tax and disputes."],
-  ["star", "High Ethical Standards", "Integrity and confidentiality at the core of every engagement."],
-  ["thumb", "Value for Cost", "International-quality work at a sensible, transparent price."],
-  ["globe", "Fluent English", "Lawyers who draft and negotiate fluently in English, Mongolian and Russian."],
-  ["clock", "Strict Adherence to Timing", "We commit to deadlines and we meet them."],
-  ["chat", "Effective Communication", "Clear, concise advice delivered when you need it."],
+  ["award", "Since 1996", "One of the first legal service firms established in Mongolia."],
+  ["star", "International Standards", "Legal services delivered in line with international standards and practice."],
+  ["globe", "International Partners", "We work with law firms in China, South Korea, Russia, Australia and France."],
+  ["shield", "Lower Business Risk", "Ongoing legal advice and support that significantly reduces business risk."],
+  ["scale", "Rights Restored", "Violated rights restored through court and administrative procedures."],
+  ["doc", "Sound Contracts", "Contracts that comply with Mongolian law and international trade law."],
+  ["book", "Legal Report", "Our online journal has kept citizens and businesses informed of government decisions since 2015."],
+  ["tag", "Transparent Fees", "Published fees for consultations, contract drafting and advocacy."],
+  ["layers", "Full-Service Support", "Legal, tax, financial and accounting advice from one firm."],
 ];
 
+const TESTIMONIALS = [
+  { quote: "Getting continuous legal advice and support in business significantly reduces business risk.",
+    author: "Jon Jin Hyeon", role: "Director, “GS Loen” NBFI" },
+  { quote: "The role of legal counsel is vital when operating in the construction sector.",
+    author: "G. Khongorzul", role: "Director, “Asian Era” LLC" },
+];
+
+const FEES = [
+  { title: "All types of consultation", price: "450,000₮", unit: "per hour" },
+  { title: "Contract drafting", price: "500,000₮ – 1,500,000₮", unit: "" },
+  { title: "Advocacy in civil cases", price: "400,000₮ – 600,000₮", unit: "per hour" },
+  { title: "Advocacy in administrative cases", price: "600,000₮", unit: "per hour" },
+  { title: "Advocacy in criminal cases", price: "400,000₮ – 600,000₮", unit: "per hour" },
+];
+
+// TODO: placeholder team: replace with the firm's real lawyers in the admin panel
 const TEAM = [
   { name: "Batbayar G.", role: "Managing Partner", bio: "Leads the firm's corporate and M&A practice with 20 years of cross-border experience.", langs: ["EN", "MN", "RU"] },
   { name: "Sarah Mitchell", role: "Partner", bio: "Advises international lenders and sponsors on banking, finance and project finance matters.", langs: ["EN", "FR"] },
@@ -98,6 +122,7 @@ const TEAM = [
   { name: "Ganbold E.", role: "Associate", bio: "Assists on banking and finance transactions and security enforcement.", langs: ["EN", "MN", "RU"] },
 ];
 
+// TODO: placeholder articles: replace with real Legal Report issues in the admin panel
 const POSTS = [
   { date: "2026-10-12", cat: "Energy", title: "New Incentives for Renewable Energy Producers",
     excerpt: "Recent amendments revise feed-in tariffs and grid-connection rules. We outline what developers need to know.",
@@ -119,14 +144,34 @@ const POSTS = [
     body: ["Membership gives our clients access to trusted counsel in more than 40 jurisdictions.", "It also strengthens our ability to support inbound investors from Europe, Asia and North America."] },
 ];
 
+/* ---------- Load content from the backend ----------
+   When the site runs with the backend (python -m backend), content comes from /api/content
+   and is edited in the admin panel. With the static server (serve.py) the API isn't there,
+   so the built-in data above is used and the contact form can't send. */
+async function loadContent() {
+  if (location.protocol === "file:") return;
+  try {
+    const r = await fetch("/api/content", { headers: { Accept: "application/json" } });
+    if (!r.ok || !r.headers.get("content-type")?.includes("json")) return;
+    const d = await r.json();
+    if (d.site) Object.assign(SITE, d.site);
+    for (const [arr, src] of [[PRACTICES, d.practices], [WHY, d.why], [TEAM, d.team], [POSTS, d.posts],
+      [TESTIMONIALS, d.testimonials], [FEES, d.fees]]) {
+      if (Array.isArray(src)) arr.splice(0, arr.length, ...src);
+    }
+  } catch { /* offline or static hosting: keep built-in data */ }
+}
+
 /* ---------- Helpers ---------- */
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const fmtDate = (d) => new Date(d + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
 const initials = (n) => n.split(/\s+/).map((w) => w[0]).join("").slice(0, 2).toUpperCase();
-const logoHTML = () => `<a class="logo" href="index.html" aria-label="${SITE.legal} home">
-    <span class="logo-mark">${SITE.name[0]}</span>
-    <span class="logo-text">${SITE.name.toUpperCase()}<small>${SITE.suffix}</small></span></a>`;
+const telHref = (p) => "tel:" + esc(String(p).replace(/[^\d+]/g, ""));
+const logoHTML = (onDark = false) => `<a class="logo" href="index.html" aria-label="${esc(SITE.legal)} home">
+    <img class="logo-mark" src="img/logo-mark${onDark ? "-white" : ""}.png" alt="" width="124" height="182">
+    <span class="logo-text">${esc(SITE.name.toUpperCase())}<small>${esc(SITE.suffix)}</small></span></a>`;
 
 /* ---------- Layout: header & footer ---------- */
 function renderLayout() {
@@ -136,8 +181,8 @@ function renderLayout() {
   const header = $("#site-header");
   if (header) header.outerHTML = `
     <div class="topbar"><div class="container">
-      <span>${SITE.address.join(", ")}</span>
-      <span><a href="mailto:${SITE.email}">${SITE.email}</a> &nbsp;|&nbsp; <a href="tel:${SITE.phone.replace(/\s/g, "")}">${SITE.phone}</a></span>
+      <span>${SITE.address.map(esc).join(", ")}</span>
+      <span><a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a> &nbsp;|&nbsp; <a href="${telHref(SITE.phone)}">${esc(SITE.phone)}</a></span>
     </div></div>
     <header class="site-header"><div class="container">
       ${logoHTML()}
@@ -150,20 +195,21 @@ function renderLayout() {
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          ${logoHTML()}
-          <p>A full-service business law firm advising international investors, domestic companies and public bodies.</p>
+          ${logoHTML(true)}
+          <p class="slogan">${esc(SITE.slogan)}</p>
+          <p>${esc(SITE.tagline)} since 1996. One of Mongolia's first legal service firms.</p>
         </div>
         <div><h4>Quick Links</h4><ul>${NAV.map(([h, l]) => `<li><a href="${h}">${l}</a></li>`).join("")}</ul></div>
         <div><h4>Contact Us</h4>
-          <p>${SITE.address.join("<br>")}</p><br>
-          <p>Email: <a href="mailto:${SITE.email}">${SITE.email}</a><br>
-          Phone: <a href="tel:${SITE.phone.replace(/\s/g, "")}">${SITE.phone}</a><br>
-          ${SITE.hours}</p>
+          <p>${SITE.address.map(esc).join("<br>")}</p><br>
+          <p>Email: <a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a><br>
+          Phone: <a href="${telHref(SITE.phone)}">${esc(SITE.phone)}</a><br>
+          ${esc(SITE.hours)}</p>
         </div>
       </div>
       <div class="footer-bottom"><div class="container">
-        <span>© ${new Date().getFullYear()} ${SITE.legal}. All rights reserved.</span>
-        <span>Attorney advertising. Prior results do not guarantee a similar outcome.</span>
+        <span>© ${new Date().getFullYear()} ${esc(SITE.legal)}. All rights reserved.</span>
+        <span lang="mn">${esc(SITE.name_mn)}</span>
       </div></div>
     </footer>
     <button class="back-to-top" aria-label="Back to top">↑</button>`;
@@ -179,7 +225,7 @@ function renderLayout() {
   btt.addEventListener("click", () => scrollTo({ top: 0 }));
 
   $$("[data-site]").forEach((el) => (el.textContent = SITE[el.dataset.site]));
-  document.title = document.title.replace("{FIRM}", SITE.name + " " + SITE.suffix);
+  document.title = document.title.replace("{FIRM}", SITE.legal);
 }
 
 /* ---------- Hero slider ---------- */
@@ -213,24 +259,47 @@ function renderPractices() {
     const n = +el.dataset.limit || PRACTICES.length;
     el.innerHTML = PRACTICES.slice(0, n).map((p) => `
       <div class="card reveal"><div class="icon">${icon(p.icon)}</div>
-        <h3>${p.title}</h3><p>${p.short}</p>
-        <a class="link-arrow" href="practices.html#${p.id}">Learn more</a></div>`).join("");
+        <h3>${esc(p.title)}</h3><p>${esc(p.short)}</p>
+        <a class="link-arrow" href="practices.html#${esc(p.id)}">Learn more</a></div>`).join("");
   }
   const nav = $("#practice-nav"), detail = $("#practice-detail");
   if (nav && detail) {
-    nav.innerHTML = PRACTICES.map((p) => `<a href="#${p.id}">${p.title}</a>`).join("");
+    nav.innerHTML = PRACTICES.map((p) => `<a href="#${esc(p.id)}">${esc(p.title)}</a>`).join("") +
+      (FEES.length ? '<a href="#fees">Fees</a>' : "");
     detail.innerHTML = PRACTICES.map((p) => `
-      <div class="practice-block reveal" id="${p.id}">
+      <div class="practice-block reveal" id="${esc(p.id)}">
         <div class="card" style="box-shadow:none;padding:0;background:none"><div class="icon">${icon(p.icon)}</div></div>
-        <h2>${p.title}</h2><p>${p.short}</p>
-        <ul>${p.items.map((x) => `<li>${x}</li>`).join("")}</ul></div>`).join("");
+        <h2>${esc(p.title)}</h2><p>${esc(p.short)}</p>
+        ${p.items.length ? `<ul>${p.items.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}</div>`).join("");
+    // Content loads asynchronously, so jump to a #practice anchor once it exists.
+    if (location.hash) document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView();
   }
 }
 
 function renderWhy() {
   const el = $("#why-grid");
   if (el) el.innerHTML = WHY.map(([ic, t, d]) => `
-    <div class="why-item reveal"><div class="icon">${icon(ic)}</div><div><h4>${t}</h4><p>${d}</p></div></div>`).join("");
+    <div class="why-item reveal"><div class="icon">${icon(ic)}</div><div><h4>${esc(t)}</h4><p>${esc(d)}</p></div></div>`).join("");
+}
+
+function renderTestimonials() {
+  const el = $("#testimonials");
+  if (!el) return;
+  const section = el.closest("section");
+  if (section) section.hidden = !TESTIMONIALS.length;
+  el.innerHTML = TESTIMONIALS.map((t) => `
+    <figure class="quote reveal"><blockquote>${esc(t.quote)}</blockquote>
+      <figcaption><strong>${esc(t.author)}</strong><span>${esc(t.role)}</span></figcaption></figure>`).join("");
+}
+
+function renderFees() {
+  const el = $("#fee-grid");
+  if (!el) return;
+  const section = el.closest("section");
+  if (section) section.hidden = !FEES.length;
+  el.innerHTML = FEES.map((f) => `
+    <div class="fee reveal"><h3>${esc(f.title)}</h3><div class="price">${esc(f.price)}</div>
+      ${f.unit ? `<div class="unit">${esc(f.unit)}</div>` : ""}</div>`).join("");
 }
 
 function renderTeam() {
@@ -238,9 +307,9 @@ function renderTeam() {
   if (!el) return;
   const n = +el.dataset.limit || TEAM.length;
   el.innerHTML = TEAM.slice(0, n).map((m) => `
-    <div class="team-card reveal"><div class="avatar">${initials(m.name)}</div>
-      <div class="info"><h3>${m.name}</h3><div class="role">${m.role}</div><p>${m.bio}</p>
-      <div class="lang-tags">${m.langs.map((l) => `<span>${l}</span>`).join("")}</div></div></div>`).join("");
+    <div class="team-card reveal"><div class="avatar">${esc(initials(m.name))}</div>
+      <div class="info"><h3>${esc(m.name)}</h3><div class="role">${esc(m.role)}</div><p>${esc(m.bio)}</p>
+      <div class="lang-tags">${m.langs.map((l) => `<span>${esc(l)}</span>`).join("")}</div></div></div>`).join("");
 }
 
 function renderPosts() {
@@ -249,9 +318,9 @@ function renderPosts() {
   const n = +el.dataset.limit || POSTS.length;
   const draw = (cat) => {
     el.innerHTML = POSTS.filter((p) => !cat || cat === "All" || p.cat === cat).slice(0, n).map((p) => `
-      <article class="post reveal visible"><div class="post-thumb"><span class="tag">${p.cat}</span></div>
+      <article class="post reveal visible"><div class="post-thumb"><span class="tag">${esc(p.cat)}</span></div>
         <div class="post-body"><div class="post-date">${fmtDate(p.date)}</div>
-        <h3>${p.title}</h3><p>${p.excerpt}</p>
+        <h3>${esc(p.title)}</h3><p>${esc(p.excerpt)}</p>
         <a href="#" class="link-arrow" data-post="${POSTS.indexOf(p)}">Read more</a></div></article>`).join("");
   };
   draw();
@@ -259,7 +328,7 @@ function renderPosts() {
   const filters = $("#post-filters");
   if (filters) {
     const cats = ["All", ...new Set(POSTS.map((p) => p.cat))];
-    filters.innerHTML = cats.map((c, k) => `<button class="${k ? "" : "active"}">${c}</button>`).join("");
+    filters.innerHTML = cats.map((c, k) => `<button class="${k ? "" : "active"}">${esc(c)}</button>`).join("");
     filters.addEventListener("click", (e) => {
       if (e.target.tagName !== "BUTTON") return;
       $$("button", filters).forEach((b) => b.classList.toggle("active", b === e.target));
@@ -280,7 +349,7 @@ function renderPosts() {
     if (!a) return;
     e.preventDefault();
     const p = POSTS[a.dataset.post];
-    $(".modal-content", modal).innerHTML = `<div class="post-date">${fmtDate(p.date)} · ${p.cat}</div><h2>${p.title}</h2>${p.body.map((t) => `<p>${t}</p>`).join("")}`;
+    $(".modal-content", modal).innerHTML = `<div class="post-date">${fmtDate(p.date)} · ${esc(p.cat)}</div><h2>${esc(p.title)}</h2>${p.body.map((t) => `<p>${esc(t)}</p>`).join("")}`;
     modal.classList.add("open");
   });
 }
@@ -288,18 +357,45 @@ function renderPosts() {
 function renderContact() {
   const info = $("#contact-info");
   if (info) info.innerHTML = `
-    <div class="item"><div class="icon">${icon("pin")}</div><div><h4>Office</h4><p>${SITE.address.join("<br>")}</p></div></div>
-    <div class="item"><div class="icon">${icon("mail")}</div><div><h4>Email</h4><p><a href="mailto:${SITE.email}">${SITE.email}</a></p></div></div>
-    <div class="item"><div class="icon">${icon("phone")}</div><div><h4>Phone</h4><p>${SITE.phone}</p></div></div>
-    <div class="item"><div class="icon">${icon("clock")}</div><div><h4>Office Hours</h4><p>${SITE.hours}</p></div></div>`;
+    <div class="item"><div class="icon">${icon("pin")}</div><div><h4>Office</h4><p>${SITE.address.map(esc).join("<br>")}</p></div></div>
+    <div class="item"><div class="icon">${icon("mail")}</div><div><h4>Email</h4><p><a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a></p></div></div>
+    <div class="item"><div class="icon">${icon("phone")}</div><div><h4>Phone</h4><p>${esc(SITE.phone)}</p></div></div>
+    <div class="item"><div class="icon">${icon("clock")}</div><div><h4>Office Hours</h4><p>${esc(SITE.hours)}</p></div></div>`;
 
   const form = $("#contact-form");
-  form?.addEventListener("submit", (e) => {
+  form?.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const msg = $(".form-msg", form);
-    msg.textContent = `Thank you, ${form.name.value.split(" ")[0]}. Your message has been received and we will reply shortly.`;
-    msg.style.display = "block";
-    form.reset();
+    const msg = $(".form-msg", form), btn = $("button[type=submit]", form);
+    const show = (text, ok) => {
+      msg.textContent = text;
+      msg.classList.toggle("error", !ok);
+      msg.style.display = "block";
+      msg.scrollIntoView({ block: "nearest", behavior: "smooth" });
+    };
+    const fallback = `Sorry, your message could not be sent. Please email us at ${SITE.email} or call ${SITE.phone}.`;
+    const data = Object.fromEntries(new FormData(form));
+    btn.disabled = true;
+    try {
+      const r = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (r.ok) {
+        show(`Thank you, ${data.name.trim().split(/\s+/)[0]}. Your message has been received and we will reply shortly.`, true);
+        form.reset();
+      } else if (r.status === 429) {
+        show(`You have sent several messages in a short time. Please try again later, or email us at ${SITE.email}.`, false);
+      } else if (r.status === 422) {
+        show("Please check that your name, a valid email address and your message are filled in, then try again.", false);
+      } else {
+        show(fallback, false);
+      }
+    } catch {
+      show(fallback, false);
+    } finally {
+      btn.disabled = false;
+    }
   });
 }
 
@@ -311,11 +407,14 @@ function initReveal() {
   $$(".reveal").forEach((el) => io.observe(el));
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+  await loadContent();
   renderLayout();
   initSlider();
   renderPractices();
   renderWhy();
+  renderTestimonials();
+  renderFees();
   renderTeam();
   renderPosts();
   renderContact();

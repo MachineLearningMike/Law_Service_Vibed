@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us | {FIRM}</title>
+  <link rel="icon" href="img/logo-mark.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,700;1,500&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
@@ -18,7 +19,7 @@
 <section><div class="container">
   <div class="contact-grid">
     <div class="contact-info reveal">
-      <div class="section-title"><h2>Get in Touch</h2><p class="lead">Contact us by phone, email or the form, or visit our office.</p></div>
+      <div class="section-title"><h2>Get in Touch</h2><p class="lead">Contact us by phone, email or the form, or visit our office. All enquiries are treated in confidence.</p></div>
       <div id="contact-info"></div>
     </div>
     <div class="form-card reveal">
@@ -31,9 +32,10 @@
         <div class="row">
           <div><label for="company">Company</label><input id="company" name="company"></div>
           <div><label for="topic">Area of interest</label>
-            <select id="topic" name="topic"><option>General enquiry</option><option>Corporate and M&amp;A</option><option>Banking and Finance</option><option>Capital Markets</option><option>Energy and Mining</option><option>Tax</option><option>Careers</option></select></div>
+            <select id="topic" name="topic"><option>General enquiry</option><option>Legal advice</option><option>Contract drafting</option><option>Internal rules and charters</option><option>Civil case</option><option>Criminal case</option><option>Administrative case</option><option>Tax law advice</option><option>Financial or accounting advice</option><option>Legal training and research</option><option>Careers</option></select></div>
         </div>
-        <label for="message">Message *</label><textarea id="message" name="message" required></textarea>
+        <label for="message">Message *</label><textarea id="message" name="message" required maxlength="5000"></textarea>
+        <div class="hp" aria-hidden="true"><label for="website">Leave this field empty</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
         <button class="btn" type="submit">Send message</button>
       </form>
     </div>
